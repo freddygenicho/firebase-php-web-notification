@@ -1,0 +1,7 @@
+https://fcm.googleapis.com/fcm/send
+Content-Type: application/json
+Authorization: key=AAAAJ0ypvYY:APA91bEMP7pWMWBiFSW75diLVTACn5TFSRtdxZcaogf4c_XljwoFCras8kjvZOx7SMf-oDaM1RmX1Z2rkpCPEGkiO0qfyojVU7eCyDmDPuEEI1uD3wKRbGvhZnxegdNgham6c7B1zP8v
+
+{"notification": { "title": "Background Message Title","body": "Background message body"}, "to" : "f5t6hLl7na0:APA91bHZuSotmu3SOWfIerF_ujJ5CnhYjHVxCBuQc2lK4lEqGX_LGjpgOsdHGx5v9eT4b4jgp6aE83kf7-L7PdsYXlrOtZVIPlOuWnrGME81Uq_ANz_twM0E3-kNRNCoE4uvwQTPTk25"}
+
+curl --header "Authorization: key=AAAAJ0ypvYY:APA91bEMP7pWMWBiFSW75diLVTACn5TFSRtdxZcaogf4c_XljwoFCras8kjvZOx7SMf-oDaM1RmX1Z2rkpCPEGkiO0qfyojVU7eCyDmDPuEEI1uD3wKRbGvhZnxegdNgham6c7B1zP8v" --header "Content-Type: application/json" -d "{{"notification": { "title": "Background Message Title","body": "Background message body"}, "to" : "f5t6hLl7na0:APA91bHZuSotmu3SOWfIerF_ujJ5CnhYjHVxCBuQc2lK4lEqGX_LGjpgOsdHGx5v9eT4b4jgp6aE83kf7-L7PdsYXlrOtZVIPlOuWnrGME81Uq_ANz_twM0E3-kNRNCoE4uvwQTPTk25"}}" https://fcm.googleapis.com/fcm/send"
