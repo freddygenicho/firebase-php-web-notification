@@ -13,17 +13,27 @@ const messaging = firebase.messaging();
 
 messaging.requestPermission()
     .then(function () {
-        console.log('Notification permission granted.');
         return messaging.getToken();
     })
     .then(function (token) {
-        //todo send token to server
-        console.log(token); // Display user token
+        sendTokenToServer(token)
     })
     .catch(function (err) {
         //happens when user denies the permission
         console.log('Unable to get permission to notify.', err);
     });
+
+function sendTokenToServer(token) {
+    console.log(token); // Display user token
+    /*$.ajax({
+        type: 'POST',
+        url: '/storetoken',
+        data: {token: token},
+        success: function (data) {
+            console.log(data)
+        }
+    });*/
+}
 
 messaging.onMessage(function (payload) {
     console.log('onMessage', payload);

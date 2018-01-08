@@ -17,15 +17,19 @@ var config = {
 
 firebase.initializeApp(config);
 
-// Retrieve an instance of Firebase Messaging so that it can handle background
-// messages.
+// Retrieve an instance of Firebase Messaging so that it can handle background messages.
 const messaging = firebase.messaging();
 
 messaging.setBackgroundMessageHandler(function (payload) {
-    const title = payload.data.title;
+
+    const title = 'Firebase Web Notification';
     const options = {
-        body: payload.data.body
+        body: payload.data.body,
+        icon: 'images/icon.png',
+        badge: 'images/badge.png'
     };
 
-    return self.registration.showNotification(title, options)
+    const notificationPromise = self.registration.showNotification(title, options);
+    return event.waitUntil(notificationPromise);
+
 });
